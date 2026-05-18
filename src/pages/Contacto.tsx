@@ -1,9 +1,8 @@
-import NavDock from '../components/NavDock'
 import ChatBubble from '../components/ChatBubble'
 
 export default function Contacto() {
   return (
-    <div className="min-h-screen pb-28">
+    <div className="min-h-screen">
       {/* Hero */}
       <section className="relative h-[180px] overflow-hidden flex items-center justify-center">
         <div
@@ -24,7 +23,7 @@ export default function Contacto() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left — Form */}
           <div className="glass rounded-kr-xl p-6 md:p-8">
-            <h2 className="text-xl font-bold text-kr-on-surface mb-6">Envíanos un mensaje</h2>
+            <h2 className="text-xl font-bold text-[var(--text-primary)] mb-6">Envíanos un mensaje</h2>
 
             <form
               onSubmit={(e) => {
@@ -34,43 +33,43 @@ export default function Contacto() {
               className="space-y-5"
             >
               <div>
-                <label className="block text-sm font-medium text-kr-on-surface-variant mb-1.5">
+                <label className="block text-sm font-medium text-[var(--text-secondary)] mb-1.5">
                   Nombre
                 </label>
                 <input
                   type="text"
                   placeholder="Tu nombre"
-                  className="w-full px-4 py-2.5 rounded-kr bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-kr-on-surface placeholder:text-kr-on-surface-variant/50 focus:outline-none focus:border-kr-orange focus:ring-1 focus:ring-kr-orange/30 transition-all"
+                  className="w-full px-4 py-2.5 rounded-kr bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-[var(--text-primary)] placeholder:text-[var(--text-secondary)]/50 focus:outline-none focus:border-kr-orange focus:ring-1 focus:ring-kr-orange/30 transition-all"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-kr-on-surface-variant mb-1.5">
+                <label className="block text-sm font-medium text-[var(--text-secondary)] mb-1.5">
                   Email
                 </label>
                 <input
                   type="email"
                   placeholder="correo@ejemplo.com"
-                  className="w-full px-4 py-2.5 rounded-kr bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-kr-on-surface placeholder:text-kr-on-surface-variant/50 focus:outline-none focus:border-kr-orange focus:ring-1 focus:ring-kr-orange/30 transition-all"
+                  className="w-full px-4 py-2.5 rounded-kr bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-[var(--text-primary)] placeholder:text-[var(--text-secondary)]/50 focus:outline-none focus:border-kr-orange focus:ring-1 focus:ring-kr-orange/30 transition-all"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-kr-on-surface-variant mb-1.5">
+                <label className="block text-sm font-medium text-[var(--text-secondary)] mb-1.5">
                   Teléfono
                 </label>
                 <input
                   type="tel"
                   placeholder="+54 11 1234-5678"
-                  className="w-full px-4 py-2.5 rounded-kr bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-kr-on-surface placeholder:text-kr-on-surface-variant/50 focus:outline-none focus:border-kr-orange focus:ring-1 focus:ring-kr-orange/30 transition-all"
+                  className="w-full px-4 py-2.5 rounded-kr bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-[var(--text-primary)] placeholder:text-[var(--text-secondary)]/50 focus:outline-none focus:border-kr-orange focus:ring-1 focus:ring-kr-orange/30 transition-all"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-kr-on-surface-variant mb-1.5">
+                <label className="block text-sm font-medium text-[var(--text-secondary)] mb-1.5">
                   Interés
                 </label>
-                <select className="w-full px-4 py-2.5 rounded-kr bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-kr-on-surface focus:outline-none focus:border-kr-orange focus:ring-1 focus:ring-kr-orange/30 transition-all appearance-none">
+                <select className="w-full px-4 py-2.5 rounded-kr bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-[var(--text-primary)] focus:outline-none focus:border-kr-orange focus:ring-1 focus:ring-kr-orange/30 transition-all appearance-none">
                   <option value="">Selecciona una opción</option>
                   <option value="clases">Clases</option>
                   <option value="membresia">Membresía</option>
@@ -79,13 +78,13 @@ export default function Contacto() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-kr-on-surface-variant mb-1.5">
+                <label className="block text-sm font-medium text-[var(--text-secondary)] mb-1.5">
                   Mensaje
                 </label>
                 <textarea
                   rows={4}
                   placeholder="Escribe tu mensaje aquí..."
-                  className="w-full px-4 py-2.5 rounded-kr bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-kr-on-surface placeholder:text-kr-on-surface-variant/50 focus:outline-none focus:border-kr-orange focus:ring-1 focus:ring-kr-orange/30 transition-all resize-none"
+                  className="w-full px-4 py-2.5 rounded-kr bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-[var(--text-primary)] placeholder:text-[var(--text-secondary)]/50 focus:outline-none focus:border-kr-orange focus:ring-1 focus:ring-kr-orange/30 transition-all resize-none"
                 />
               </div>
 
@@ -101,7 +100,7 @@ export default function Contacto() {
           {/* Right — Contact Info */}
           <div className="space-y-6">
             <div className="glass rounded-kr-xl p-6 md:p-8 space-y-6">
-              <h2 className="text-xl font-bold text-kr-on-surface mb-2">
+              <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
                 Información de Contacto
               </h2>
 
@@ -110,8 +109,8 @@ export default function Contacto() {
                   📍
                 </div>
                 <div>
-                  <h3 className="font-semibold text-kr-on-surface text-sm">Dirección</h3>
-                  <p className="text-sm text-kr-on-surface-variant mt-0.5">
+                  <h3 className="font-semibold text-[var(--text-primary)] text-sm">Dirección</h3>
+                  <p className="text-sm text-[var(--text-secondary)] mt-0.5">
                     Av. Corrientes 1234, CABA, Argentina
                   </p>
                 </div>
@@ -122,8 +121,8 @@ export default function Contacto() {
                   📞
                 </div>
                 <div>
-                  <h3 className="font-semibold text-kr-on-surface text-sm">Teléfono</h3>
-                  <p className="text-sm text-kr-on-surface-variant mt-0.5">+54 11 5555-6789</p>
+                  <h3 className="font-semibold text-[var(--text-primary)] text-sm">Teléfono</h3>
+                  <p className="text-sm text-[var(--text-secondary)] mt-0.5">+54 11 5555-6789</p>
                 </div>
               </div>
 
@@ -132,8 +131,8 @@ export default function Contacto() {
                   ✉️
                 </div>
                 <div>
-                  <h3 className="font-semibold text-kr-on-surface text-sm">Email</h3>
-                  <p className="text-sm text-kr-on-surface-variant mt-0.5">
+                  <h3 className="font-semibold text-[var(--text-primary)] text-sm">Email</h3>
+                  <p className="text-sm text-[var(--text-secondary)] mt-0.5">
                     hola@kineticrest.com
                   </p>
                 </div>
@@ -144,11 +143,11 @@ export default function Contacto() {
                   🕐
                 </div>
                 <div>
-                  <h3 className="font-semibold text-kr-on-surface text-sm">Horario</h3>
-                  <p className="text-sm text-kr-on-surface-variant mt-0.5">
+                  <h3 className="font-semibold text-[var(--text-primary)] text-sm">Horario</h3>
+                  <p className="text-sm text-[var(--text-secondary)] mt-0.5">
                     Lun – Vie: 5am – 11pm
                   </p>
-                  <p className="text-sm text-kr-on-surface-variant">Sáb – Dom: 7am – 9pm</p>
+                  <p className="text-sm text-[var(--text-secondary)]">Sáb – Dom: 7am – 9pm</p>
                 </div>
               </div>
             </div>
@@ -156,12 +155,12 @@ export default function Contacto() {
             {/* Map Placeholder */}
             <div className="glass rounded-kr-xl p-6 flex flex-col items-center justify-center h-[220px] text-center">
               <span className="text-4xl mb-3">🗺️</span>
-              <p className="text-sm font-medium text-kr-on-surface">Mapa Interactivo</p>
-              <p className="text-xs text-kr-on-surface-variant mt-1">
+              <p className="text-sm font-medium text-[var(--text-primary)]">Mapa Interactivo</p>
+              <p className="text-xs text-[var(--text-secondary)] mt-1">
                 Av. Corrientes 1234, CABA
               </p>
               <div className="mt-3 w-full h-[1px] bg-[var(--glass-border)]" />
-              <p className="text-[11px] text-kr-on-surface-variant mt-3">
+              <p className="text-[11px] text-[var(--text-secondary)] mt-3">
                 Próximamente — mapa embebido con Google Maps
               </p>
             </div>
@@ -169,7 +168,7 @@ export default function Contacto() {
         </div>
       </section>
 
-      <NavDock />
+      {/* Nav removed — using Header */}
       <ChatBubble />
     </div>
   )

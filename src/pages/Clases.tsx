@@ -1,7 +1,7 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { classes } from '../data/gimnasio'
 import type { GymClass } from '../data/gimnasio'
-import NavDock from '../components/NavDock'
 import ChatBubble from '../components/ChatBubble'
 
 const categories = ['Todas', 'Yoga', 'HIIT', 'Weights', 'Pilates', 'Boxing', 'Spinning'] as const
@@ -28,6 +28,7 @@ const categoryMap: Record<string, GymClass['category']> = {
 }
 
 export default function Clases() {
+  const navigate = useNavigate()
   const [activeCategory, setActiveCategory] = useState<string>('Todas')
 
   const filteredClasses =
@@ -36,7 +37,7 @@ export default function Clases() {
       : classes.filter((c) => c.category === categoryMap[activeCategory])
 
   return (
-    <div className="min-h-screen pb-28">
+    <div className="min-h-screen">
       {/* Hero */}
       <section className="relative h-[220px] overflow-hidden">
         <div
@@ -64,7 +65,7 @@ export default function Clases() {
               className={`shrink-0 px-4 py-1.5 rounded-kr-full text-sm font-medium transition-all duration-200 ${
                 activeCategory === cat
                   ? 'bg-kr-orange text-white shadow-lg shadow-kr-orange/30'
-                  : 'glass text-kr-on-surface-variant hover:text-kr-on-surface'
+                  : 'glass text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
               }`}
             >
               {cat}
@@ -118,7 +119,10 @@ export default function Clases() {
                   ))}
                 </div>
 
-                <button className="text-xs font-semibold uppercase tracking-wider bg-kr-orange text-white px-3 py-1.5 rounded-kr-full hover:bg-kr-orange/90 transition-colors">
+                <button
+                  onClick={() => navigate('/contacto')}
+                  className="text-xs font-semibold uppercase tracking-wider bg-kr-orange text-white px-3 py-1.5 rounded-kr-full hover:bg-kr-orange/90 transition-colors"
+                >
                   Reservar
                 </button>
               </div>
@@ -127,13 +131,13 @@ export default function Clases() {
         </div>
 
         {filteredClasses.length === 0 && (
-          <p className="text-center text-kr-on-surface-variant py-16">
+          <p className="text-center text-[var(--text-secondary)] py-16">
             No hay clases en esta categoría.
           </p>
         )}
       </section>
 
-      <NavDock />
+      {/* Nav removed — using Header */}
       <ChatBubble />
     </div>
   )

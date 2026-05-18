@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { classes, trainers, stats } from '../data/gimnasio'
 import ClayButton from '../components/ClayButton'
 import GlassCard from '../components/GlassCard'
@@ -134,6 +135,7 @@ function useMouseGlow(ref: React.RefObject<HTMLElement | null>) {
    ═══════════════════════════════════════ */
 
 export default function Home() {
+  const navigate = useNavigate()
   const heroRef = useRef<HTMLDivElement>(null)
   const bentoStaggerRef = useRef<HTMLDivElement>(null)
   const [heroLoaded, setHeroLoaded] = useState(false)
@@ -142,11 +144,7 @@ export default function Home() {
   useMouseGlow(heroRef)
 
   const scrollTo = (id: string) => {
-    const el = document.getElementById(id)
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 140
-      window.scrollTo({ top, behavior: 'smooth' })
-    }
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   return (
@@ -308,7 +306,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════
           SECTION 4 — CLASES DESTACADAS (id="clases")
           ═══════════════════════════════════════ */}
-      <section id="clases" className="py-24 px-4 md:px-8 max-w-7xl mx-auto scroll-mt-36">
+      <section id="clases" className="py-24 px-4 md:px-8 max-w-7xl mx-auto scroll-mt-48">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">
             Clases{' '}
@@ -368,7 +366,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════
           SECTION 5 — TRAINERS
           ═══════════════════════════════════════ */}
-      <section id="trainers" className="py-24 px-4 md:px-8 bg-kr-surface-container scroll-mt-36">
+      <section id="trainers" className="py-24 px-4 md:px-8 bg-kr-surface-container scroll-mt-48">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">
@@ -457,7 +455,7 @@ export default function Home() {
               variant="secondary"
               size="lg"
               glowOnHover
-              onClick={() => scrollTo('clases')}
+              onClick={() => navigate('/membresias')}
             >
               VER PLANES
             </ClayButton>

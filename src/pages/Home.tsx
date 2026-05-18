@@ -142,7 +142,11 @@ export default function Home() {
   useMouseGlow(heroRef)
 
   const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    const el = document.getElementById(id)
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 100
+      window.scrollTo({ top, behavior: 'smooth' })
+    }
   }
 
   return (
@@ -355,7 +359,7 @@ export default function Home() {
 
         {/* View Full Schedule Button */}
         <div className="text-center mt-12">
-          <ClayButton variant="ghost" size="lg" onClick={() => scrollTo('trainers')}>
+          <ClayButton variant="secondary" size="lg" onClick={() => scrollTo('trainers')}>
             VER HORARIO COMPLETO
           </ClayButton>
         </div>
@@ -383,12 +387,12 @@ export default function Home() {
                 className="text-center animate-fade-up stagger"
                 style={{ animationDelay: `${i * 120}ms` } as React.CSSProperties}
               >
-                <div className="relative mx-auto mb-5 w-28 h-28 md:w-32 md:h-32">
-                  <div className="w-full h-full rounded-full overflow-hidden ring-4 ring-kr-orange/20 ring-offset-2 ring-offset-kr-surface-container">
+                <div className="relative mx-auto mb-5 w-28 h-28 md:w-32 md:h-32 group">
+                  <div className="w-full h-full rounded-full overflow-hidden ring-4 ring-kr-orange/20 ring-offset-2 ring-offset-kr-surface-container transition-all duration-500 group-hover:ring-kr-orange group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-kr-orange/30">
                     <img
                       src={trainer.image}
                       alt={trainer.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                     />
                   </div>
                   {/* Decorative clay circle */}
@@ -461,7 +465,7 @@ export default function Home() {
               variant="ghost"
               size="lg"
               className="text-white border-white/30 hover:bg-white/10"
-              onClick={() => scrollTo('clases')}
+              onClick={() => window.open('https://wa.me/18091234567?text=Hola%2C%20quiero%20hablar%20con%20un%20asesor%20de%20Kinetic%20Rest', '_blank')}
             >
               HABLAR CON ASESOR
             </ClayButton>

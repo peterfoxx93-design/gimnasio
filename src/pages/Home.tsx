@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { classes, trainers, stats } from '../data/gimnasio'
 import ClayButton from '../components/ClayButton'
 import GlassCard from '../components/GlassCard'
-import ChatBubble from '../components/ChatBubble'
-
 /* ═══════════════════════════════════════
    SVG ICONS — Claymorphic class icons
    ═══════════════════════════════════════ */
@@ -479,7 +477,6 @@ export default function Home() {
         </p>
         <p>© 2026 Kinetic Rest. Todos los derechos reservados.</p>
       </footer>
-      <ChatBubble />
     </div>
   )
 }

@@ -1,6 +1,4 @@
 import { memberships, facilities } from '../data/gimnasio'
-import ChatBubble from '../components/ChatBubble'
-
 const facilityIcons: Record<string, string> = {
   Cardio: '🏃',
   Pesas: '💪',
@@ -110,7 +108,7 @@ export default function Membresias() {
       </section>
 
       {/* Nav removed — using Header */}
-      <ChatBubble />
+
     </div>
   )
 }

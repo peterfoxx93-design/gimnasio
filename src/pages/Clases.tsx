@@ -2,8 +2,6 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { classes } from '../data/gimnasio'
 import type { GymClass } from '../data/gimnasio'
-import ChatBubble from '../components/ChatBubble'
-
 const categories = ['Todas', 'Yoga', 'HIIT', 'Weights', 'Pilates', 'Boxing', 'Spinning'] as const
 
 const intensityColors: Record<GymClass['intensity'], string> = {
@@ -138,7 +136,7 @@ export default function Clases() {
       </section>
 
       {/* Nav removed — using Header */}
-      <ChatBubble />
+
     </div>
   )
 }

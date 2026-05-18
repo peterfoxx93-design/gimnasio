@@ -1,5 +1,3 @@
-import ChatBubble from '../components/ChatBubble'
-
 export default function Contacto() {
   return (
     <div className="min-h-screen">
@@ -169,7 +167,7 @@ export default function Contacto() {
       </section>
 
       {/* Nav removed — using Header */}
-      <ChatBubble />
+
     </div>
   )
 }

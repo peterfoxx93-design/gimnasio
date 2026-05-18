@@ -144,7 +144,7 @@ export default function Home() {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id)
     if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 100
+      const top = el.getBoundingClientRect().top + window.scrollY - 140
       window.scrollTo({ top, behavior: 'smooth' })
     }
   }
@@ -308,7 +308,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════
           SECTION 4 — CLASES DESTACADAS (id="clases")
           ═══════════════════════════════════════ */}
-      <section id="clases" className="py-24 px-4 md:px-8 max-w-7xl mx-auto scroll-mt-20">
+      <section id="clases" className="py-24 px-4 md:px-8 max-w-7xl mx-auto scroll-mt-36">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">
             Clases{' '}
@@ -368,7 +368,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════
           SECTION 5 — TRAINERS
           ═══════════════════════════════════════ */}
-      <section id="trainers" className="py-24 px-4 md:px-8 bg-kr-surface-container scroll-mt-20">
+      <section id="trainers" className="py-24 px-4 md:px-8 bg-kr-surface-container scroll-mt-36">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">
